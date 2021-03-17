@@ -9,7 +9,12 @@ class Pokemon
     @hp = hp
   end 
   
-  
+  def self.save(name, type, hp, db)
+    sql = <<-SQL
+    INSERT INTO pokemon(name, tpye) VALUES (?,?);
+    SQL
+    
+    DB[:conn].execute(sql, name, type)
   
   
   
