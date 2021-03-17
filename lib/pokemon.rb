@@ -15,6 +15,7 @@ class Pokemon
     SQL
     
     DB[:conn].execute(sql, name, type)
+  end 
   
   
   
